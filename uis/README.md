@@ -1,15 +1,16 @@
-# `uis` folder
+# nexova Backoffice
 
-This folder contains **all projects with a user interface** for the cross-functional AI Engineering company project — for example: a public website, admin dashboard frontend, ecommerce UI, customer portals, Streamlit/Gradio app or other frontend-only tools.
+Panel interno realizado con Next.js, React y TypeScript.
 
-The two main projects stored here are:
+Permite cargar el CSV de incidencias de nexova, visualizar métricas y descargar los resultados.
 
-- **`website`** — the company's public-facing web presence.
-- **`backoffice`** — the internal admin application. This is the ideal place to develop multiple solutions within a single project: authentication, people management, operations management, internal communication, and other back-office capabilities.
+## Ejecutar
 
-Organize `uis/` by **different concerns** — each subfolder covers a distinct area of the company (for example, public web vs internal operations) and includes its own technical and functional documentation.
+Primero debe estar funcionando FastAPI en el puerto 8000.
 
-- **Main purpose**: to centralize in a single place all frontend applications that support the company's use cases.
-- **Recommendation**: document in this file (or in sub-READMEs) the applications you add, their objective, the technology used, and how to run them.
+Después:
 
-> _Estas instrucciones también están disponibles en [español](./README.es.md)._
+```bash
+npm install
+npm run dev -- --hostname 0.0.0.0
+```
