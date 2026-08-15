@@ -1,10 +1,12 @@
-# `services` folder
+# nexova Incidents API
 
-This folder contains **all the backend services** (APIs and background workers) related to the company for the cross-functional AI Engineering project.
+Backend FastAPI para analizar archivos CSV de incidencias de nexova.
 
-Each subfolder inside `services/` must correspond to **one specific service** (for example: `admin-api`, `data-processor-worker`) and include its own technical and functional documentation.
+## Ejecutar
 
-- **Main purpose**: to centralize all the backend logic, APIs, and queue consumers that support the company's use cases.
-- **Recommendation**: document in this file (or in sub-READMEs) the services you add, their objective, the technology used, and how to run them.
+Desde la raíz del monorepo:
 
-> _Spanish version: [README.es.md](./README.es.md)._
+```bash
+source .venv/bin/activate
+python -m uvicorn services.api.main:app --host 0.0.0.0 --port 8000 --reload
+```
